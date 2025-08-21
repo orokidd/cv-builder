@@ -8,10 +8,25 @@ import Experience from "./components/form/Experience";
 import Preview from "./components/preview/preview";
 
 function App() {
-  const [personal, setPersonal] = useState({});
-  const [education, setEducation] = useState([]);
-  const [skills, setSkills] = useState([]);
-  const [experience, setExperience] = useState([]);
+  const [personal, setPersonal] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    city: "",
+    state: "",
+  });
+
+  const [education, setEducation] = useState([
+    { degree: "", institution: "", year: "" },
+  ]);
+
+  const [skills, setSkills] = useState([
+    { skill: "", proficiency: "" },
+  ]);
+
+  const [experience, setExperience] = useState([
+    { jobTitle: "", company: "", years: "" },
+  ]);
 
   return (
     <>

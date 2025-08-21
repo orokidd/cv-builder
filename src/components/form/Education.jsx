@@ -1,28 +1,52 @@
+// Education.jsx
 import React from "react";
 
 export default function Education({ education, setEducation }) {
-  function handleChange(e) {
+  function handleChange(index, e) {
     const { name, value } = e.target;
-    setEducation((prev) => ({ ...prev, [name]: value }));
+    setEducation((prev) => {
+      const newEducation = [...prev];
+      newEducation[index] = { ...newEducation[index], [name]: value };
+      return newEducation;
+    });
+  }
+
+  function addEducation() {
+    setEducation((prev) => [
+      ...prev,
+      { degree: "", institution: "", year: "" }
+    ]);
+  }
+
+  function removeEducation(index) {
+    setEducation((prev) => prev.filter((_, i) => i !== index));
   }
 
   return (
     <section>
       <h2>Education</h2>
-      <form>
-        <label>
-          Degree:
-          <input type="text" value={education.degree || ""} name="degree" onChange={handleChange} />
-        </label>
-        <label>
-          Institution:
-          <input type="text" value={education.institution || ""} name="institution" onChange={handleChange} />
-        </label>
-        <label>
-          Year of Graduation:
-          <input type="text" value={education.year || ""} name="year" onChange={handleChange} />
-        </label>
-      </form>
+      {education.map((edu, index) => (
+        <form key={index}>
+          <label>
+            Degree:
+            <input type="text" value={edu.degree || ""} name="degree" onChange={(e) => handleChange(index, e)} />
+          </label>
+          <label>
+            Institution:
+            <input type="text" value={edu.institution || ""} name="institution" onChange={(e) => handleChange(index, e)} />
+          </label>
+          <label>
+            Year of Graduation:
+            <input type="text" value={edu.year || ""} name="year" onChange={(e) => handleChange(index, e)} />
+          </label>
+          <button type="button" onClick={() => removeEducation(index)}>
+            Remove
+          </button>
+        </form>
+      ))}
+      <button type="button" onClick={addEducation}>
+        Add Education
+      </button>
     </section>
   );
 }
