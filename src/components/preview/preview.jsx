@@ -9,6 +9,8 @@ export default function Preview({ personal, education, experience, skills }) {
                 <p>Name: {personal.name}</p>
                 <p>Email: {personal.email}</p>
                 <p>Phone: {personal.phone}</p>
+                <p>City: {personal.city}</p>
+                <p>State: {personal.state}</p>
             </section>
             <section>
                 <h3>Education</h3>

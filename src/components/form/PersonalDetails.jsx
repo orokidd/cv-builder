@@ -22,6 +22,14 @@ export function PersonalDetails({ personal, setPersonal }) {
           Phone:
           <input type="tel" value={personal.phone || ""} name="phone" onChange={handleChange} />
         </label>
+        <label>
+          City:
+          <input type="text" value={personal.city || ""} name="city" onChange={handleChange} />
+        </label>
+        <label>
+          State:
+          <input type="text" value={personal.state || ""} name="state" onChange={handleChange} />
+        </label>
       </form>
     </section>
   );
