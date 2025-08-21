@@ -2,6 +2,7 @@
 import React from "react";
 
 export default function Education({ education, setEducation }) {
+    
   function handleChange(index, e) {
     const { name, value } = e.target;
     setEducation((prev) => {
@@ -12,21 +13,19 @@ export default function Education({ education, setEducation }) {
   }
 
   function addEducation() {
-    setEducation((prev) => [
-      ...prev,
-      { degree: "", institution: "", year: "" }
-    ]);
+    setEducation((prev) => [...prev, { degree: "", institution: "", year: "" }]);
   }
 
   function removeEducation(index) {
     setEducation((prev) => prev.filter((_, i) => i !== index));
   }
 
-  return (
-    <section>
-      <h2>Education</h2>
+return (
+  <section>
+    <h2>Education</h2>
+    <form>
       {education.map((edu, index) => (
-        <form key={index}>
+        <div key={index}>
           <label>
             Degree:
             <input type="text" value={edu.degree || ""} name="degree" onChange={(e) => handleChange(index, e)} />
@@ -42,11 +41,12 @@ export default function Education({ education, setEducation }) {
           <button type="button" onClick={() => removeEducation(index)}>
             Remove
           </button>
-        </form>
+        </div>
       ))}
       <button type="button" onClick={addEducation}>
         Add Education
       </button>
-    </section>
-  );
+    </form>
+  </section>
+);
 }

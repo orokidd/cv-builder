@@ -21,7 +21,7 @@ function App() {
   ]);
 
   const [skills, setSkills] = useState([
-    { skill: "", proficiency: "" },
+    { skillName: "" },
   ]);
 
   const [experience, setExperience] = useState([

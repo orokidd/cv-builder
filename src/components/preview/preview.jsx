@@ -25,8 +25,11 @@ export default function Preview({ personal, education, experience, skills }) {
       </section>
       <section>
         <h3>Skills</h3>
-        <p>Skill: {skills.skill}</p>
-        <p>Proficiency: {skills.proficiency}</p>
+        {skills.map((skill, index) => (
+          <div key={index}>
+            <p>Skill: {skill.skillName}</p>
+          </div>
+        ))}
       </section>
       <section>
         <h3>Experience</h3>
