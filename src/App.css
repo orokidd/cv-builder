@@ -1,0 +1,17 @@
+#root, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+}
+
+.form-section {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+}

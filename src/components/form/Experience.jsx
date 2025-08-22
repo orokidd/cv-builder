@@ -7,7 +7,7 @@ export default function Experience({ experience, setExperience }) {
   }
 
   return (
-    <section>
+    <section className="form-section">
       <h2>Experience</h2>
       <form>
         <label>

@@ -20,9 +20,7 @@ function App() {
     { degree: "", institution: "", year: "" },
   ]);
 
-  const [skills, setSkills] = useState([
-    { skillName: "" },
-  ]);
+  const [skills, setSkills] = useState([{ skillName: "" }]);
 
   const [experience, setExperience] = useState([
     { jobTitle: "", company: "", years: "" },
@@ -31,20 +29,22 @@ function App() {
   return (
     <>
       <Header />
-      <div className="form-container">
-        <PersonalDetails personal={personal} setPersonal={setPersonal} />
-        <Education education={education} setEducation={setEducation} />
-        <Skills skills={skills} setSkills={setSkills} />
-        <Experience experience={experience} setExperience={setExperience} />
-      </div>
-      <div className="form-preview">
-        <Preview
-          personal={personal}
-          education={education}
-          experience={experience}
-          skills={skills}
-        />
-      </div>
+      <main>
+        <div className="form-container">
+          <PersonalDetails personal={personal} setPersonal={setPersonal} />
+          <Education education={education} setEducation={setEducation} />
+          <Skills skills={skills} setSkills={setSkills} />
+          <Experience experience={experience} setExperience={setExperience} />
+        </div>
+        <div className="form-preview">
+          <Preview
+            personal={personal}
+            education={education}
+            experience={experience}
+            skills={skills}
+          />
+        </div>
+      </main>
     </>
   );
 }

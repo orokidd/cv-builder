@@ -21,7 +21,7 @@ export default function Education({ education, setEducation }) {
   }
 
 return (
-  <section>
+  <section className="form-section">
     <h2>Education</h2>
     <form>
       {education.map((edu, index) => (

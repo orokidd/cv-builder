@@ -7,7 +7,7 @@ export function PersonalDetails({ personal, setPersonal }) {
   }
 
   return (
-    <section>
+    <section className="form-section">
       <h2>Personal Details</h2>
       <form>
         <label>

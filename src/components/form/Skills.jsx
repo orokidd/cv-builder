@@ -20,7 +20,7 @@ export default function Skills({ skills, setSkills }) {
   }
 
   return (
-    <section>
+    <section className="form-section">
       <h2>Skills</h2>
       <form>
         {skills.map((skill, index) => (
