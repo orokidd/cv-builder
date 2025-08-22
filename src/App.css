@@ -24,3 +24,20 @@ main {
     flex-direction: column;
     gap: 12px;
 }
+
+.form-preview {
+    min-width: 1000px;
+    background-color: #ccc;
+    padding: 24px;
+}
+
+.preview-main {
+    display: flex;
+}
+
+.preview-side {
+    flex: 1;
+}
+.preview-right {
+    flex: 3;
+}

@@ -16,6 +16,15 @@ function App() {
     state: "",
   });
 
+  const [contact, setContact] = useState(
+    {
+      email: "",
+      phone: "",
+      website: "",
+      address: ""
+    }
+  )
+
   const [education, setEducation] = useState([
     { degree: "", institution: "", year: "" },
   ]);
