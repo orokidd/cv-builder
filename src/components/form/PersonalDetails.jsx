@@ -1,19 +1,27 @@
-import React from "react";
+import { useState } from "react";
 
 export function PersonalDetails({ personal, setPersonal }) {
+
+  const [isOpen, setIsOpen] = useState(false);
+
   function handleChange(e) {
     const { name, value } = e.target;
     setPersonal((prev) => ({ ...prev, [name]: value }));
   }
 
+  function handleClick() {
+    setIsOpen((prev) => !prev);
+  }
+
   return (
-    <section className="form-section">
-      <h2>Personal Details</h2>
-      <form>
+    <section className="form-section" onClick={handleClick}>
+      <h2>Personal Details {isOpen ? "▲" : "▼"}</h2>
+      {isOpen ? (
+      <form className="form-personal">
         <label>
           Name:
           <input type="text" value={personal.name || ""} name="name" onChange={handleChange} />
-        </label>
+        </label>  
         <label>
           Email:
           <input type="email" value={personal.email || ""} name="email" onChange={handleChange} />
@@ -30,7 +38,7 @@ export function PersonalDetails({ personal, setPersonal }) {
           State:
           <input type="text" value={personal.state || ""} name="state" onChange={handleChange} />
         </label>
-      </form>
+      </form>) : null}
     </section>
   );
 }
