@@ -14,8 +14,8 @@ export function PersonalDetails({ personal, setPersonal }) {
   }
 
   return (
-    <section className="form-section" onClick={handleClick}>
-      <h2>Personal Details {isOpen ? "▲" : "▼"}</h2>
+    <section className="form-section" >
+      <h2 onClick={handleClick}>Personal Details {isOpen ? "▲" : "▼"}</h2>
       {isOpen ? (
       <form className="form-personal">
         <label>

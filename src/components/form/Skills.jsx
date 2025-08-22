@@ -1,6 +1,8 @@
-import React from "react";
+import { useState } from "react";
 
 export default function Skills({ skills, setSkills }) {
+
+    const [isOpen, setIsOpen] = useState(false);
 
   function handleChange(index, e) {
     const { value } = e.target;
@@ -19,14 +21,19 @@ export default function Skills({ skills, setSkills }) {
     setSkills((prev) => prev.filter((_, i) => i !== index));
   }
 
+  function handleClick() {
+    setIsOpen((prev) => !prev);
+  }
+
   return (
-    <section className="form-section">
-      <h2>Skills</h2>
-      <form className="form-skills">
-        {skills.map((skill, index) => (
-          <div key={index}>
-            <label>
-              Skill:
+    <section className="form-section" >
+      <h2 onClick={handleClick}>Skills {isOpen ? "▲" : "▼"}</h2>
+      {isOpen ? (
+        <form className="form-skills">
+          {skills.map((skill, index) => (
+            <div key={index}>
+              <label>
+                Skill:
               <input type="text" value={skill.skillName || ""} name="skill" onChange={(e) => handleChange(index, e)} />
             </label>
             <button type="button" onClick={() => removeSkill(index)}>
@@ -38,6 +45,7 @@ export default function Skills({ skills, setSkills }) {
           Add Skill
         </button>
       </form>
+    ) : null}
     </section>
   );
 }

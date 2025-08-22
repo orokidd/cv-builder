@@ -27,8 +27,8 @@ export default function Education({ education, setEducation }) {
   }
 
 return (
-  <section className="form-section" onClick={handleClick}>
-    <h2>Education {isOpen ? "▲" : "▼"}</h2>
+  <section className="form-section" >
+    <h2 onClick={handleClick}>Education {isOpen ? "▲" : "▼"}</h2>
     {isOpen? ( 
     <form className="form-education">
       {education.map((edu, index) => (
