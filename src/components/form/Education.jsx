@@ -1,7 +1,9 @@
 // Education.jsx
-import React from "react";
+import { useState } from "react";
 
 export default function Education({ education, setEducation }) {
+
+    const [isOpen, setIsOpen] = useState(false);
     
   function handleChange(index, e) {
     const { name, value } = e.target;
@@ -20,10 +22,15 @@ export default function Education({ education, setEducation }) {
     setEducation((prev) => prev.filter((_, i) => i !== index));
   }
 
+  function handleClick() {
+    setIsOpen((prev) => !prev);
+  }
+
 return (
-  <section className="form-section">
-    <h2>Education</h2>
-    <form>
+  <section className="form-section" onClick={handleClick}>
+    <h2>Education {isOpen ? "▲" : "▼"}</h2>
+    {isOpen? ( 
+    <form className="form-education">
       {education.map((edu, index) => (
         <div key={index}>
           <label>
@@ -47,6 +54,7 @@ return (
         Add Education
       </button>
     </form>
+    ) : null}
   </section>
 );
 }

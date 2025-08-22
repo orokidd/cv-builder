@@ -9,7 +9,7 @@ export default function Experience({ experience, setExperience }) {
   return (
     <section className="form-section">
       <h2>Experience</h2>
-      <form>
+      <form className="form-experience">
         <label>
           Job Title:
           <input type="text" value={experience.jobTitle || ""} name="jobTitle" onChange={handleChange} />
