@@ -33,13 +33,13 @@ return (
     <form className="form-education">
       {education.map((edu, index) => (
         <div key={index}>
+        <label>
+            Institution:
+            <input type="text" value={edu.institution || ""} name="institution" onChange={(e) => handleChange(index, e)} />
+          </label>
           <label>
             Degree:
             <input type="text" value={edu.degree || ""} name="degree" onChange={(e) => handleChange(index, e)} />
-          </label>
-          <label>
-            Institution:
-            <input type="text" value={edu.institution || ""} name="institution" onChange={(e) => handleChange(index, e)} />
           </label>
           <label>
             Year of Graduation:

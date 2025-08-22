@@ -29,9 +29,8 @@ export default function Preview({ personal, contact, education, experience, skil
             <h2>Education</h2>
             {education.map((edu, index) => (
               <div key={index}>
-                <p>Degree: {edu.degree}</p>
-                <p>Institution: {edu.institution}</p>
-                <p>Year of Graduation: {edu.year}</p>
+                <h3>{edu.institution || "Institution Name"}</h3>
+                <p>{edu.degree || "Degree"} ({edu.year || "Year"})</p>
               </div>
             ))}
           </section>
@@ -48,9 +47,8 @@ export default function Preview({ personal, contact, education, experience, skil
         <div className="preview-right">
           <section className="preview-experience">
             <h2>Experience</h2>
-            <p>Job Title: {experience.jobTitle}</p>
-            <p>Company: {experience.company}</p>
-            <p>Years of Experience: {experience.years}</p>
+            <h3>{experience.company || "Company name"}</h3>
+            <p>{experience.jobTitle || "Job title"} ({experience.years || "Years of Experience"})</p>
           </section>
         </div>
       </div>
