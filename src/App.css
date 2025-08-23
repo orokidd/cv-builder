@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Inter, Arial, sans-serif;
 }
 
 main {
@@ -11,14 +11,33 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+
+  padding: 24px 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(98, 107, 94);
+    padding: 20px;
+}
+header > h1{
+    margin: 0;
+    color: whitesmoke;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .form-section {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   padding: 16px;
   border-radius: 8px;
-  margin: 16px 0;
   min-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .form-section h2 {
   cursor: pointer;
@@ -34,8 +53,9 @@ main {
 }
 
 .form-preview {
-  min-width: 800px;
-  min-height: 1100px;
+  min-width: 900px;
+  min-height: 1000px;
+  max-height: 1000px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 40px;
 }
