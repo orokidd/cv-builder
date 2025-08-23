@@ -1,43 +1,67 @@
-#root, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#root,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .form-section {
-    border: 1px solid #ccc;
-    padding: 16px;
-    border-radius: 8px;
-    margin: 16px 0;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+  min-width: 600px;
 }
 .form-section h2 {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.form-personal, .form-education, .form-skills, .form-experience {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.form-personal,
+.form-education,
+.form-skills,
+.form-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .form-preview {
-    min-width: 1000px;
-    background-color: #ccc;
-    padding: 24px;
+  min-width: 800px;
+  min-height: 1100px;
+  background-color: #ccc;
+  padding: 40px;
 }
 
 .preview-main {
-    display: flex;
+  display: flex;
 }
 
 .preview-side {
-    flex: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 .preview-right {
-    flex: 2;
+  flex: 1;
+}
+
+.preview-name {
+  font-size: 2.8rem;
+}
+
+input {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 12px;
+  display: block; /* makes it take its own line */
+  width: 100%; /* makes it span the whole container */
+  box-sizing: border-box; /* ensures padding/border don’t overflow */
 }

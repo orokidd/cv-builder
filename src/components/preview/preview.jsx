@@ -5,7 +5,7 @@ export default function Preview({ personal, contact, education, experience, skil
   return (
     <>
       <section className="preview-personal">
-        <h1>{personal.name || "Your Name"}</h1>
+        <h1 className="preview-name">{personal.name || "Your Name"}</h1>
         <p>
           {personal.city || "Your City"}, {personal.state || "Your State"}
         </p>
@@ -38,7 +38,9 @@ export default function Preview({ personal, contact, education, experience, skil
             <h2>Skills</h2>
             {skills.map((skill, index) => (
               <div key={index}>
-                <p>Skill: {skill.skillName}</p>
+                <ul>
+                  <li>{skill.skillName}</li>
+                </ul>
               </div>
             ))}
           </section>
