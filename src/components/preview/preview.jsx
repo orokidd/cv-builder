@@ -1,13 +1,10 @@
-// Preview.jsx
-import React from "react";
-
 export default function Preview({ personal, contact, education, experience, skills }) {
   return (
     <>
       <section className="preview-personal">
-        <h1 className="preview-name">{personal.name || "Your Name"}</h1>
+        <h1 className="preview-name">{personal.name || "Gregorius Deandra Hanifa"}</h1>
         <p>
-          {personal.city || "Your City"}, {personal.state || "Your State"}
+          {personal.city || "Old York City"}, {personal.state || "South West Madagascar"}
         </p>
       </section>
 
@@ -18,10 +15,10 @@ export default function Preview({ personal, contact, education, experience, skil
           <section className="preview-contacts">
             <h2>Contacts</h2>
               <div>
-                <p>Email: {contact.email}</p>
-                <p>Phone: {contact.phone}</p>
-                <p>Website: {contact.website}</p>
-                <p>Address: {contact.address}</p>
+                <p>Email: {contact.email || "Your Email"}</p>
+                <p>Phone: {contact.phone || "Your Phone"}</p>
+                <p>Website: {contact.website || "Your Website"}</p>
+                <p>Address: {contact.address || "Your Address"}</p>
               </div>
             
           </section>
@@ -39,7 +36,7 @@ export default function Preview({ personal, contact, education, experience, skil
             {skills.map((skill, index) => (
               <div key={index}>
                 <ul>
-                  <li>{skill.skillName}</li>
+                  <li>{skill.skillName || "Skill Name"}</li>
                 </ul>
               </div>
             ))}

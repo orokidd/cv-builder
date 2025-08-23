@@ -36,7 +36,7 @@ header > h1{
   /* border: 1px solid #ccc; */
   padding: 16px;
   border-radius: 8px;
-  min-width: 600px;
+  min-width: 400px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .form-section h2 {

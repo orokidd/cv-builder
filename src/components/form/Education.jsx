@@ -3,19 +3,23 @@ import { useState } from "react";
 
 export default function Education({ education, setEducation }) {
 
-    const [isOpen, setIsOpen] = useState(false);
-    
-  function handleChange(index, e) {
+  const [formData, setFormData] = useState({
+    institution: "",
+    degree: "",
+    year: "",
+  });
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleFormChange(e) {
     const { name, value } = e.target;
-    setEducation((prev) => {
-      const newEducation = [...prev];
-      newEducation[index] = { ...newEducation[index], [name]: value };
-      return newEducation;
-    });
+    setFormData((prev) => ({ ...prev, [name]: value }));
   }
 
-  function addEducation() {
-    setEducation((prev) => [...prev, { degree: "", institution: "", year: "" }]);
+  function handleFormSubmit(e) {
+    e.preventDefault(); // stop page reload
+    setEducation((prev) => [...prev, formData]);
+    setFormData({ institution: "", degree: "", year: "" }); // reset form
   }
 
   function removeEducation(index) {
@@ -26,35 +30,54 @@ export default function Education({ education, setEducation }) {
     setIsOpen((prev) => !prev);
   }
 
-return (
-  <section className="form-section" >
-    <h2 onClick={handleClick}>Education {isOpen ? "▲" : "▼"}</h2>
-    {isOpen? ( 
-    <form className="form-education">
-      {education.map((edu, index) => (
-        <div key={index}>
-        <label>
-            Institution:
-            <input type="text" value={edu.institution || ""} name="institution" onChange={(e) => handleChange(index, e)} />
-          </label>
-          <label>
-            Degree:
-            <input type="text" value={edu.degree || ""} name="degree" onChange={(e) => handleChange(index, e)} />
-          </label>
-          <label>
-            Year of Graduation:
-            <input type="text" value={edu.year || ""} name="year" onChange={(e) => handleChange(index, e)} />
-          </label>
-          <button type="button" onClick={() => removeEducation(index)}>
-            Remove
-          </button>
-        </div>
-      ))}
-      <button type="button" onClick={addEducation}>
-        Add Education
-      </button>
-    </form>
-    ) : null}
-  </section>
-);
+  return (
+    <section className="form-section">
+      <h2 onClick={handleClick}>Education {isOpen ? "▲" : "▼"}</h2>
+      {isOpen ? (
+        <>
+          {education.map((edu, index) => (
+            <div key={index}>
+              <span>{edu.institution}</span>
+              <button type="button" onClick={() => removeEducation(index)}>
+                Remove
+              </button>
+            </div>
+          ))}
+
+          <form className="form-education" onSubmit={handleFormSubmit}>
+            <label>
+              Institution:
+              <input
+                type="text"
+                value={formData.institution}
+                name="institution"
+                onChange={handleFormChange}
+              />
+            </label>
+            <label>
+              Degree:
+              <input
+                type="text"
+                value={formData.degree}
+                name="degree"
+                onChange={handleFormChange}
+              />
+            </label>
+            <label>
+              Year of Graduation:
+              <input
+                type="text"
+                value={formData.year}
+                name="year"
+                onChange={handleFormChange}
+              />
+            </label>
+            <button type="submit">
+              Add Education
+            </button>
+          </form>
+        </>
+      ) : null}
+    </section>
+  );
 }
