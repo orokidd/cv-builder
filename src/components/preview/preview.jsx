@@ -49,8 +49,12 @@ export default function Preview({ personal, contact, education, experience, skil
         <div className="preview-right">
           <section className="preview-experience">
             <h2>Experience</h2>
-            <h3>{experience.company || "Company name"}</h3>
-            <p>{experience.jobTitle || "Job title"} ({experience.years || "Years of Experience"})</p>
+            {experience.map((experience, index) => (
+              <div key={index}>
+                <h3>{experience.company || "Company name"}</h3>
+                <p>{experience.jobTitle || "Job title"} ({experience.years || "Years of Experience"})</p>
+              </div>
+            ))}
           </section>
         </div>
       </div>

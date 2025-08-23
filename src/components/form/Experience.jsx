@@ -4,13 +4,28 @@ export default function Experience({ experience, setExperience }) {
 
     const [isOpen, setIsOpen] = useState(false);
 
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setExperience((prev) => ({ ...prev, [name]: value }));
-  }
+  function handleChange(e, index) {
+  const { name, value } = e.target;
+  setExperience((prev) => {
+    const newExp = [...prev];
+    newExp[index] = { ...newExp[index], [name]: value };
+    return newExp;
+  });
+}
 
   function handleClick() {
     setIsOpen((prev) => !prev);
+  }
+
+  function addExperience() {
+    setExperience((prev) => [
+      ...prev,
+      { jobTitle: "", company: "", years: "" },
+    ]);
+  }
+
+  function removeExperience(index) {
+    setExperience((prev) => prev.filter((_, i) => i !== index));
   }
 
   return (
@@ -18,20 +33,30 @@ export default function Experience({ experience, setExperience }) {
       <h2 onClick={handleClick}>Experience {isOpen ? "▲" : "▼"}</h2>
       {isOpen ? (
         <form className="form-experience">
-          <label>
-            Job Title:
-            <input type="text" value={experience.jobTitle || ""} name="jobTitle" onChange={handleChange} />
-          </label>
-        <label>
-          Company:
-          <input type="text" value={experience.company || ""} name="company" onChange={handleChange} />
-        </label>
-        <label>
-          Years of Experience:
-          <input type="text" value={experience.years || ""} name="years" onChange={handleChange} />
-        </label>
-      </form>
-        ) : null}
+          {experience.map((exp, index) => (
+            <div key={index}>
+              <label>
+                Job Title:
+                <input type="text" value={exp.jobTitle || ""} name="jobTitle" onChange={(e) => handleChange(e, index)} />
+              </label>
+              <label>
+                Company:
+                <input type="text" value={exp.company || ""} name="company" onChange={(e) => handleChange(e, index)} />
+              </label>
+              <label>
+                Years of Experience:
+                <input type="text" value={exp.years || ""} name="years" onChange={(e) => handleChange(e, index)} />
+              </label>
+              <button type="button" onClick={() => removeExperience(index)}>
+              Remove Experience
+            </button>
+            </div>
+          ))}
+          <button type="button" onClick={addExperience}>
+            Add Experience
+          </button>
+        </form>
+      ) : null}
     </section>
   );
 }
