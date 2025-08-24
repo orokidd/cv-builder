@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ArrowUpIcon, ArrowDownIcon } from "../Icons";
 
 export default function Experience({ experience, setExperience }) {
 
@@ -30,7 +31,7 @@ export default function Experience({ experience, setExperience }) {
 
   return (
     <section className="form-section" >
-      <h2 onClick={handleClick}>Experience {isOpen ? "▲" : "▼"}</h2>
+      <h2 onClick={handleClick}>Experience {isOpen ? (<ArrowUpIcon size={20} />) : (<ArrowDownIcon size={20} />)}</h2>
       {isOpen ? (
         <form className="form-experience">
           {experience.map((exp, index) => (
