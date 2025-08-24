@@ -26,9 +26,7 @@ function App() {
     }
   )
 
-  const [education, setEducation] = useState([
-    { degree: "S1 Teknik Informatika", institution: "Institut teknologi kalimantan", year: "2025" },
-  ]);
+  const [education, setEducation] = useState([]);
 
   const [skills, setSkills] = useState([{ skillName: "" }]);
 

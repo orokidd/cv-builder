@@ -37,7 +37,7 @@ export default function Education({ education, setEducation }) {
         <>
           {education.map((edu, index) => (
             <div key={index}>
-              <span>{edu.institution}</span>
+              <span>{edu.institution || "Unknown Institution"}</span>
               <button type="button" onClick={() => removeEducation(index)}>
                 Remove
               </button>
