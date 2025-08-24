@@ -28,7 +28,7 @@ function App() {
 
   const [education, setEducation] = useState([]);
 
-  const [skills, setSkills] = useState([{ skillName: "" }]);
+  const [skills, setSkills] = useState([]);
 
   const [experience, setExperience] = useState([
     { jobTitle: "", company: "", years: "" },

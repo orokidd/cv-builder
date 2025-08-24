@@ -1,21 +1,7 @@
 import { useState } from "react";
 
 export default function Skills({ skills, setSkills }) {
-
-    const [isOpen, setIsOpen] = useState(false);
-
-  function handleChange(index, e) {
-    const { value } = e.target;
-    setSkills((prev) => {
-        const newSkills = [...prev];
-      newSkills[index] = { ...newSkills[index], skillName: value };
-      return newSkills;
-    });
-  }
-
-  function addSkill() {
-    setSkills((prev) => [...prev, { skill: "" }]);
-  }
+  const [isOpen, setIsOpen] = useState(false);
 
   function removeSkill(index) {
     setSkills((prev) => prev.filter((_, i) => i !== index));
@@ -25,27 +11,38 @@ export default function Skills({ skills, setSkills }) {
     setIsOpen((prev) => !prev);
   }
 
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const newSkill = { skillName: formData.get("skill") };
+    setSkills((prev) => [...prev, newSkill]);
+    e.target.reset();
+  }
+
   return (
-    <section className="form-section" >
+    <section className="form-section">
       <h2 onClick={handleClick}>Skills {isOpen ? "▲" : "▼"}</h2>
       {isOpen ? (
-        <form className="form-skills">
+        <>
           {skills.map((skill, index) => (
             <div key={index}>
-              <label>
-                Skill:
-              <input type="text" value={skill.skillName || ""} name="skill" onChange={(e) => handleChange(index, e)} />
+              <span>{skill.skillName || "Unknown Skill"}</span>
+              <button type="button" onClick={() => removeSkill(index)}>
+                Remove
+              </button>
+            </div>
+          ))}
+
+          <form className="form-skills" onSubmit={handleFormSubmit}>
+            <label>
+              Skill:
+              <input type="text" name="skill" />
             </label>
-            <button type="button" onClick={() => removeSkill(index)}>
-              Remove
-            </button>
-          </div>
-        ))}
-        <button type="button" onClick={addSkill}>
-          Add Skill
-        </button>
-      </form>
-    ) : null}
+
+            <button type="submit">Add Skill</button>
+          </form>
+        </>
+      ) : null}
     </section>
   );
 }
