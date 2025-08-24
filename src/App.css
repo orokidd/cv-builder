@@ -37,6 +37,7 @@ header > h1{
   padding: 16px;
   border-radius: 8px;
   min-width: 400px;
+  max-width: 400px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .form-section h2 {
@@ -54,6 +55,7 @@ header > h1{
 
 .form-preview {
   min-width: 900px;
+  max-width: 900px;
   min-height: 1000px;
   max-height: 1000px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);

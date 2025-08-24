@@ -40,13 +40,19 @@ export default function Preview({ personal, contact, education, experience, skil
           </section>
           <section className="preview-skills">
             <h2>Skills</h2>
-            {skills.map((skill, index) => (
-              <div key={index}>
+            {skills.length === 0 ? (
                 <ul>
-                  <li>{skill.skillName || "Skill Name"}</li>
-                </ul>
-              </div>
-            ))}
+                    <li>Skill name</li>
+                  </ul>
+            ) : (
+              skills.map((skill, index) => (
+                <div key={index}>
+                  <ul>
+                    <li>{skill.skillName || "Skill Name"}</li>
+                  </ul>
+                </div>
+              ))
+            )}
           </section>
         </div>
 
