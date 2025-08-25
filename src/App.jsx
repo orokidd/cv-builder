@@ -30,9 +30,7 @@ function App() {
 
   const [skills, setSkills] = useState([]);
 
-  const [experience, setExperience] = useState([
-    { jobTitle: "", company: "", years: "" },
-  ]);
+  const [experience, setExperience] = useState([]);
 
   return (
     <>
