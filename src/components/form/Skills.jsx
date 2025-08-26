@@ -40,7 +40,7 @@ export default function Skills({ skills, setSkills }) {
               <input type="text" name="skill" />
             </label>
 
-            <button type="submit">Add Skill</button>
+            <button type="submit" className="add-skill-button">Add Skill</button>
           </form>
         </>
       ) : null}

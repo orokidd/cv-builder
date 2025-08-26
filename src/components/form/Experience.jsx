@@ -54,7 +54,7 @@ export default function Experience({ experience, setExperience }) {
               Years of Experience:
               <input type="text" name="years" />
             </label>
-            <button type="submit">Add Experience</button>
+            <button type="submit" className="add-experience-button">Add Experience</button>
           </form>
         </>
       ) : null}

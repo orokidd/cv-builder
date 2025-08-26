@@ -77,7 +77,7 @@ export default function Education({ education, setEducation }) {
                 onChange={handleFormChange}
               />
             </label>
-            <button type="submit">Add Education</button>
+            <button type="submit" className="add-education-button">Add Education</button>
           </form>
         </>
       ) : null}
