@@ -16,7 +16,7 @@ export function Contact({ contact, setContact }) {
 
   return (
     <section className="form-section" >
-      <h2 onClick={handleClick}>Contact {isOpen ? (<ArrowUpIcon size={20} />) : (<ArrowDownIcon size={20} />)}</h2>
+      <h2 onClick={handleClick}>📞 Contact {isOpen ? (<ArrowUpIcon size={20} />) : (<ArrowDownIcon size={20} />)}</h2>
       {isOpen ? (
       <form className="form-personal">
         <label>

@@ -16,7 +16,7 @@ export function PersonalDetails({ personal, setPersonal }) {
 
   return (
     <section className="form-section" >
-      <h2 onClick={handleClick}>Personal Details {isOpen ? (<ArrowUpIcon size={20} />) : (<ArrowDownIcon size={20} />)}</h2>
+      <h2 onClick={handleClick}>📝 Personal Details {isOpen ? (<ArrowUpIcon size={20} />) : (<ArrowDownIcon size={20} />)}</h2>
       {isOpen ? (
       <form className="form-personal">
         <label>

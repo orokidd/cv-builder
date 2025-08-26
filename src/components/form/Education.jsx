@@ -33,7 +33,7 @@ export default function Education({ education, setEducation }) {
 
   return (
     <section className="form-section">
-      <h2 onClick={handleClick}>Education {isOpen ? (<ArrowUpIcon size={20} />) : (<ArrowDownIcon size={20} />)}</h2>
+      <h2 onClick={handleClick}>🎓 Education {isOpen ? (<ArrowUpIcon size={20} />) : (<ArrowDownIcon size={20} />)}</h2>
       {isOpen ? (
         <>
           {education.map((edu, index) => (

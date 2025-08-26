@@ -29,10 +29,7 @@ export default function Experience({ experience, setExperience }) {
 
   return (
     <section className="form-section">
-      <h2 onClick={handleClick}>
-        Experience{" "}
-        {isOpen ? <ArrowUpIcon size={20} /> : <ArrowDownIcon size={20} />}
-      </h2>
+      <h2 onClick={handleClick}>💼 Experience {isOpen ? <ArrowUpIcon size={20} /> : <ArrowDownIcon size={20} />}</h2>
       {isOpen ? (
         <>
           {experience.map((exp, index) => (
