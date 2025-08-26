@@ -63,6 +63,10 @@ export default function Experience({ experience, setExperience }) {
               Years of Experience:
               <input type="text" name="years" />
             </label>
+            <label>
+              Description:
+              <textarea name="description" />
+            </label>
             <button type="submit" className="add-experience-button">
               Add Experience
             </button>

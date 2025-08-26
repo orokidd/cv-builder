@@ -137,3 +137,15 @@ input {
   width: 100%; /* makes it span the whole container */
   box-sizing: border-box; /* ensures padding/border don’t overflow */
 }
+
+textarea {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 12px;
+  display: block; /* makes it take its own line */
+  width: 100%; /* makes it span the whole container */
+  box-sizing: border-box; /* ensures padding/border don’t overflow */
+  min-height: 80px;
+  resize: vertical;
+}
