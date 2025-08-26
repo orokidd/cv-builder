@@ -33,7 +33,7 @@ export default function Experience({ experience, setExperience }) {
       {isOpen ? (
         <>
           {experience.map((exp, index) => (
-            <div key={index}>
+            <div key={index} className="experience-item">
               <span>{exp.jobTitle || "Unknown Job Title"}</span>
               <button type="button" onClick={() => removeExperience(index)}>
                 Remove

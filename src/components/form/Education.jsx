@@ -1,9 +1,8 @@
 // Education.jsx
 import { useState } from "react";
-import { ArrowUpIcon, ArrowDownIcon } from "../Icons";
+import { ArrowUpIcon, ArrowDownIcon, CloseIcon } from "../Icons";
 
 export default function Education({ education, setEducation }) {
-
   const [formData, setFormData] = useState({
     institution: "",
     degree: "",
@@ -33,17 +32,22 @@ export default function Education({ education, setEducation }) {
 
   return (
     <section className="form-section">
-      <h2 onClick={handleClick}>🎓 Education {isOpen ? (<ArrowUpIcon size={20} />) : (<ArrowDownIcon size={20} />)}</h2>
+      <h2 onClick={handleClick}>
+        🎓 Education{" "}
+        {isOpen ? <ArrowUpIcon size={20} /> : <ArrowDownIcon size={20} />}
+      </h2>
       {isOpen ? (
         <>
-          {education.map((edu, index) => (
-            <div key={index}>
-              <span>{edu.institution || "Unknown Institution"}</span>
-              <button type="button" onClick={() => removeEducation(index)}>
-                Remove
-              </button>
-            </div>
-          ))}
+          <div className="education-list">
+            {education.map((edu, index) => (
+              <div key={index} className="education-item">
+                <span>{edu.institution || "Unknown Institution"}</span>
+                <button type="button" onClick={() => removeEducation(index)}>
+                  <CloseIcon size={20} />
+                </button>
+              </div>
+            ))}
+          </div>
 
           <form className="form-education" onSubmit={handleFormSubmit}>
             <label>
@@ -73,9 +77,7 @@ export default function Education({ education, setEducation }) {
                 onChange={handleFormChange}
               />
             </label>
-            <button type="submit">
-              Add Education
-            </button>
+            <button type="submit">Add Education</button>
           </form>
         </>
       ) : null}

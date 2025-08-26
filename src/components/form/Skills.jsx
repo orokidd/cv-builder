@@ -26,7 +26,7 @@ export default function Skills({ skills, setSkills }) {
       {isOpen ? (
         <>
           {skills.map((skill, index) => (
-            <div key={index}>
+            <div key={index} className="skills-item">
               <span>{skill.skillName || "Unknown Skill"}</span>
               <button type="button" onClick={() => removeSkill(index)}>
                 Remove
