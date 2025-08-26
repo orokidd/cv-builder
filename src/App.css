@@ -65,12 +65,18 @@ header > h1{
   gap: 12px;
 }
 
-.education-list {
+.education-list,
+.experience-list,
+.skills-list {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+
+  padding-bottom: 12px;
 }
-.education-item {
+.education-item,
+.experience-item,
+.skills-item {
   display: flex;
   justify-content: center;
   align-items: center;

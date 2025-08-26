@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpIcon, ArrowDownIcon } from "../Icons";
+import { ArrowUpIcon, ArrowDownIcon, CloseIcon } from "../Icons";
 
 export default function Skills({ skills, setSkills }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,17 +22,22 @@ export default function Skills({ skills, setSkills }) {
 
   return (
     <section className="form-section">
-      <h2 onClick={handleClick}>💡 Skills {isOpen ? (<ArrowUpIcon size={20} />) : (<ArrowDownIcon size={20} />)}</h2>
+      <h2 onClick={handleClick}>
+        💡 Skills{" "}
+        {isOpen ? <ArrowUpIcon size={20} /> : <ArrowDownIcon size={20} />}
+      </h2>
       {isOpen ? (
         <>
-          {skills.map((skill, index) => (
-            <div key={index} className="skills-item">
-              <span>{skill.skillName || "Unknown Skill"}</span>
-              <button type="button" onClick={() => removeSkill(index)}>
-                Remove
-              </button>
-            </div>
-          ))}
+          <div className="skills-list">
+            {skills.map((skill, index) => (
+              <div key={index} className="skills-item">
+                <span>{skill.skillName || "Unknown Skill"}</span>
+                <button type="button" onClick={() => removeSkill(index)}>
+                  <CloseIcon size={20} />
+                </button>
+              </div>
+            ))}
+          </div>
 
           <form className="form-skills" onSubmit={handleFormSubmit}>
             <label>
@@ -40,7 +45,9 @@ export default function Skills({ skills, setSkills }) {
               <input type="text" name="skill" />
             </label>
 
-            <button type="submit" className="add-skill-button">Add Skill</button>
+            <button type="submit" className="add-skill-button">
+              Add Skill
+            </button>
           </form>
         </>
       ) : null}
