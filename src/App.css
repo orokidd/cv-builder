@@ -33,6 +33,18 @@ header > h1{
     color: whitesmoke;
 }
 
+h3 {
+  margin: 0;
+}
+
+p {
+  white-space: pre-line;
+}
+
+li {
+  padding: 4px 0;
+}
+
 .form-container {
     display: flex;
     flex-direction: column;
@@ -137,6 +149,19 @@ header > h1{
 .preview-experience .company {
   display: flex;
   justify-content: space-between;
+}
+
+.preview-experience .item {
+  padding-bottom: 40px;
+}
+
+.preview-experience p {
+  margin: 0;
+}
+
+.preview-experience .job-title {
+  font-weight: 600;
+  margin: 8px 0;
 }
 
 input {

@@ -43,7 +43,7 @@ export default function Experience({ experience, setExperience }) {
           <div className="experience-list">
             {experience.map((exp, index) => (
               <div key={index} className="experience-item">
-                <span>{exp.jobTitle || "Unknown Job Title"}</span>
+                <span>{exp.company || "Unknown Company"}</span>
                 <button type="button" onClick={() => removeExperience(index)}>
                   <CloseIcon size={20} />
                 </button>
