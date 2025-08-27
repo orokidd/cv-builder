@@ -11,7 +11,7 @@ export default function Experience({ experience, setExperience }) {
   function addExperience() {
     setExperience((prev) => [
       ...prev,
-      { jobTitle: "", company: "", years: "" },
+      { jobTitle: "", company: "", years: "" , description: "" },
     ]);
   }
 
@@ -26,6 +26,7 @@ export default function Experience({ experience, setExperience }) {
       jobTitle: formData.get("jobTitle"),
       company: formData.get("company"),
       years: formData.get("years"),
+      description: formData.get("description"),
     };
     setExperience((prev) => [...prev, newExp]);
     e.target.reset();
