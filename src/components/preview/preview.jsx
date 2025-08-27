@@ -1,3 +1,5 @@
+import { InboxIcon, PhoneIcon, GlobeIcon, HouseIcon } from "../Icons";
+
 export default function Preview({ personal, contact, education, experience, skills }) {
   return (
     <>
@@ -15,10 +17,10 @@ export default function Preview({ personal, contact, education, experience, skil
           <section className="preview-contacts">
             <h2>Contacts</h2>
               <div>
-                <p>Email: {contact.email || "Your Email"}</p>
-                <p>Phone: {contact.phone || "Your Phone"}</p>
-                <p>Website: {contact.website || "Your Website"}</p>
-                <p>Address: {contact.address || "Your Address"}</p>
+                <p><GlobeIcon size={22}/> {contact.email || "Your Email"}</p>
+                <p><PhoneIcon size={22}/> {contact.phone || "Your Phone"}</p>
+                <p><GlobeIcon size={22}/> {contact.website || "Your Website"}</p>
+                <p><HouseIcon size={22}/> {contact.address || "Your Address"}</p>
               </div>
             
           </section>
