@@ -66,7 +66,7 @@ export default function Experience({ experience, setExperience }) {
             </label>
             <label>
               Description:
-              <textarea name="description" />
+              <textarea name="description" placeholder="Use (-) for bullet points"/>
             </label>
             <button type="submit" className="add-experience-button">
               Add Experience
