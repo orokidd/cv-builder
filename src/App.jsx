@@ -44,13 +44,7 @@ function App() {
           <Experience experience={experience} setExperience={setExperience} />
         </div>
         <div className="form-preview">
-          <Preview
-            personal={personal}
-            contact={contact}
-            education={education}
-            experience={experience}
-            skills={skills}
-          />
+          <Preview personal={personal} contact={contact} education={education} experience={experience} skills={skills} />
         </div>
       </main>
     </>
