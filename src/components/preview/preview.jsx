@@ -4,13 +4,7 @@ import { Skills } from "./Skills";
 import { Personal } from "./Personal";
 import { Experience } from "./Experience";
 
-export default function Preview({
-  personal,
-  contact,
-  education,
-  experience,
-  skills,
-}) {
+export default function Preview({ personal, contact, education, experience, skills }) {
   return (
     <>
       <div className="preview-header">

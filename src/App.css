@@ -133,11 +133,12 @@ li {
   gap: 18px;
 }
 .preview-right {
-  flex: 1;
+  flex: 1.5;
 }
 
 .preview-name {
   font-size: 2.8rem;
+  max-width: 600px;
 }
 
 .preview-contacts p {
