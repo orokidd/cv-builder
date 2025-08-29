@@ -4,7 +4,6 @@ export function Contact({ contact }) {
   return (
     <section className="preview-contacts">
       <h2>Contact</h2>
-      <div>
         <p>
           <InboxIcon size={22} /> {contact.email || "Your Email"}
         </p>
@@ -17,7 +16,6 @@ export function Contact({ contact }) {
         <p>
           <HouseIcon size={22} /> {contact.address || "Your Address"}
         </p>
-      </div>
     </section>
   );
 }
