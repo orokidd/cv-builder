@@ -39,10 +39,17 @@ h3 {
 
 p {
   white-space: pre-line;
+  
 }
 
 li {
   padding: 4px 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
 }
 
 .form-container {

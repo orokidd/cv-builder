@@ -4,7 +4,7 @@ export function Personal({ personal }) {
       <h1 className="preview-name">
         {personal.name || "Gregorius Deandra Hanifa"}
       </h1>
-      <p style={{ whiteSpace: "pre" }}>{personal.email}  {personal.phone}  {personal.city || "Old York City"},{" "}{personal.state || "South West Madagascar"}</p>
+      <p style={{ whiteSpace: "pre" }}>{personal.city || "Old York City"}, {personal.state || "South West Madagascar"}</p>
     </section>
   );
 }

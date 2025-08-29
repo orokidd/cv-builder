@@ -1,10 +1,8 @@
-import { InboxIcon, PhoneIcon, GlobeIcon, HouseIcon } from "../Icons";
-
-export function Profile({ profile }) {
+export function Profile() {
   return (
     <section className="preview-profile">
       <h2>Profile</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat alias veritatis rerum nisi esse error hic quos sed nemo dolorum pariatur libero distinctio nesciunt, aperiam ipsum rem consequuntur deserunt possimus</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt justo id eleifend facilisis. Suspendisse nec leo sodales, scelerisque neque quis, tempus dolor. Proin lacinia, ex ac commodo vulputate, tellus mauris aliquet metus, a fermentum justo orci a elit. Etiam mollis luctus blandit. Sed vestibulum convallis tempor.</p>
     </section>
   );
 }
