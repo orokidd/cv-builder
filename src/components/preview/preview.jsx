@@ -1,6 +1,7 @@
 import { Contact } from "./Contact";
 import { Education } from "./Education";
 import { Skills } from "./Skills";
+import { Personal } from "./Personal";
 
 export default function Preview({
   personal,
@@ -11,15 +12,9 @@ export default function Preview({
 }) {
   return (
     <>
-      <section className="preview-personal">
-        <h1 className="preview-name">
-          {personal.name || "Gregorius Deandra Hanifa"}
-        </h1>
-        <p>
-          {personal.city || "Old York City"},{" "}
-          {personal.state || "South West Madagascar"}
-        </p>
-      </section>
+      <div className="preview-header">
+        <Personal personal={personal} />
+      </div>
 
       <div className="preview-main">
         <div className="preview-side">
