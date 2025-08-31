@@ -1,9 +1,9 @@
-import { Contact } from "./Contact";
-import { Education } from "./Education";
-import { Skills } from "./Skills";
-import { Personal } from "./Personal";
-import { Experience } from "./Experience";
-import { Profile } from "./Profile";
+import { Contact } from "./PreviewContact";
+import { Education } from "./PreviewEducation";
+import { Skills } from "./PreviewSkills";
+import { Personal } from "./PreviewPersonal";
+import { Experience } from "./PreviewExperience";
+import { Profile } from "./PreviewProfile";
 
 export default function Preview({ personal, contact, education, experience, skills }) {
   return (
