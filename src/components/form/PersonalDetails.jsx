@@ -31,6 +31,10 @@ export function PersonalDetails({ personal, setPersonal }) {
           State:
           <input type="text" value={personal.state || ""} name="state" onChange={handleChange} />
         </label>
+        <label>
+          Profile:
+          <textarea name="profile" value={personal.profile || ""} placeholder="" onChange={handleChange}/>
+        </label>
       </form>) : null}
     </section>
   );

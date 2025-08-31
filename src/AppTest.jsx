@@ -11,10 +11,9 @@ import { Contact } from "./components/form/Contact";
 function App() {
   const [personal, setPersonal] = useState({
     name: "Muhammad Hudaa Sabrie",
-    email: "hudasabrie@gmail.com",
-    phone: "(+62)895339741303",
     city: "Balikpapan",
     state: "Kalimantan Timur",
+    profile: "Software Engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success.",
   });
 
   const [contact, setContact] = useState(

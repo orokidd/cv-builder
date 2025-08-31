@@ -10,7 +10,7 @@ export default function Preview({ personal, contact, education, experience, skil
     <>
       <div className="preview-header">
         <Personal personal={personal} />
-        <Profile />
+        <Profile personal={personal} />
       </div>
 
       <div className="preview-main">
