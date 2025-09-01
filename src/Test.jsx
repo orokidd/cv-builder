@@ -7,7 +7,7 @@ import Education from "./components/form/Education";
 import Skills from "./components/form/Skills";
 import Experience from "./components/form/Experience";
 import { Contact } from "./components/form/Contact";
-import Preview from "./components/resume/ResumePreview";
+import Preview from "./components/resume/preview";
 
 function App() {
   const [personal, setPersonal] = useState({
@@ -80,8 +80,15 @@ function App() {
           <Skills skills={skills} setSkills={setSkills} />
           <Experience experience={experience} setExperience={setExperience} />
         </div>
-        <div className="form-preview" ref={previewRef}>
-          <Preview personal={personal} contact={contact} education={education} experience={experience} skills={skills} />
+        <div className="form-preview">
+          <Preview 
+            ref={previewRef} 
+            personal={personal} 
+            contact={contact} 
+            education={education} 
+            experience={experience} 
+            skills={skills} 
+          />
         </div>
       </main>
     </>

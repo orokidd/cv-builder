@@ -1,10 +1,8 @@
-import React from "react";
-
-export default function Header() {
+export default function Header({ onDownload }) {
   return (
     <header className="header">
       <h1>CV Builder</h1>
-      <button>Download PDF</button>
+      <button onClick={onDownload}>Download PDF</button>
     </header>
   );
 }

@@ -12,15 +12,12 @@ export default function Preview({ personal, contact, education, experience, skil
         <Personal personal={personal} />
         <Profile personal={personal} />
       </div>
-
       <div className="preview-main">
         <div className="preview-side">
           <Contact contact={contact} />
-          {/* <Profile /> */}
           <Education education={education} />
           <Skills skills={skills} />
         </div>
-
         <div className="preview-right">
           <Experience experience={experience} />
         </div>
