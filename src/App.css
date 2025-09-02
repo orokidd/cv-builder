@@ -22,15 +22,32 @@ main {
   padding: 24px 0;
 }
 
+
 header {
+  background-color: rgb(98, 107, 94);
+  padding: 20px;
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(98, 107, 94);
-    padding: 20px;
+    max-width: 1430px;
+    margin: 0 auto;
 }
-header > h1{
+.header-content > h1{
     margin: 0;
     color: whitesmoke;
+}
+
+.download-button {
+  padding: 10px 16px;
+  background-color: white;
+  border-radius: 6px;
+  font-weight: 400;
+}
+
+.download-button:hover {
+  background-color: rgb(220, 220, 220);
 }
 
 h3 {
@@ -170,6 +187,14 @@ ul {
 .preview-experience .job-title {
   font-weight: 600;
   margin: 8px 0;
+}
+
+/* .section-title{
+  border-bottom: 2px solid #999999;
+} */
+
+.preview-side .section-title {
+  margin-right: 24px;
 }
 
 input {

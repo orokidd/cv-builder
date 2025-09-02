@@ -3,7 +3,7 @@ import { InboxIcon, PhoneIcon, GlobeIcon, HouseIcon } from "../Icons";
 export function Contact({ contact }) {
   return (
     <section className="preview-contacts">
-      <h2>Contact</h2>
+      <h2 className="section-title">Contact</h2>
         <p>
           <InboxIcon size={22} /> {contact.email || "Your Email"}
         </p>

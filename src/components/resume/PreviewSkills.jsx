@@ -1,7 +1,7 @@
 export function Skills({ skills }) {
   return (
     <section className="preview-skills">
-      <h2>Skills</h2>
+      <h2 className="section-title">Skills</h2>
       {skills.length === 0 ? (
         <ul>
           <li>Skill name</li>

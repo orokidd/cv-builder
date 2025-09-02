@@ -1,7 +1,7 @@
 export function Experience({ experience }) {
   return (
     <section className="preview-experience">
-      <h2>Experience</h2>
+      <h2 className="section-title">Experience</h2>
       {experience.length === 0 ? (
         <>
           <h3>Company Name</h3>

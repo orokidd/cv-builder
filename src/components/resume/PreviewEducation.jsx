@@ -1,7 +1,7 @@
 export function Education({ education }) {
   return (
     <section className="preview-education">
-      <h2>Education</h2>
+      <h2 className="section-title">Education</h2>
       {education.length === 0 ? (
         <>
           <h3>Institution Name</h3>
