@@ -100,6 +100,12 @@ ul {
   margin: 0;
 }
 
+/* form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+} */
+
 .form-personal,
 .form-education,
 .form-skills,
