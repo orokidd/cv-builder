@@ -80,8 +80,10 @@ function App() {
           <Skills skills={skills} setSkills={setSkills} />
           <Experience experience={experience} setExperience={setExperience} />
         </div>
-        <div className="form-preview" ref={previewRef}>
-          <Preview personal={personal} contact={contact} education={education} experience={experience} skills={skills} />
+        <div className="preview-wrapper">
+          <div className="form-preview" ref={previewRef}>
+            <Preview personal={personal} contact={contact} education={education} experience={experience} skills={skills} />
+          </div>
         </div>
       </main>
     </>

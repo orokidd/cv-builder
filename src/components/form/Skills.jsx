@@ -22,10 +22,10 @@ export default function Skills({ skills, setSkills }) {
 
   return (
     <section className="form-section">
-      <h2 onClick={handleClick}>
+      <p onClick={handleClick}>
         💡 Skills{" "}
         {isOpen ? <ArrowUpIcon size={20} /> : <ArrowDownIcon size={20} />}
-      </h2>
+      </p>
       {isOpen ? (
         <>
           <div className="skills-list">
