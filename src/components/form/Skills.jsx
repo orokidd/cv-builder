@@ -1,15 +1,8 @@
-import { useState } from "react";
 import { ArrowUpIcon, ArrowDownIcon, CloseIcon } from "../Icons";
 
 export default function Skills({ isActive, onShow, skills, setSkills }) {
-  const [isOpen, setIsOpen] = useState(false);
-
   function removeSkill(index) {
     setSkills((prev) => prev.filter((_, i) => i !== index));
-  }
-
-  function handleClick() {
-    setIsOpen((prev) => !prev);
   }
 
   function handleFormSubmit(e) {

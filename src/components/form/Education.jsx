@@ -9,8 +9,6 @@ export default function Education({ isActive, onShow, education, setEducation })
     year: "",
   });
 
-  const [isOpen, setIsOpen] = useState(false);
-
   function handleFormChange(e) {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -24,10 +22,6 @@ export default function Education({ isActive, onShow, education, setEducation })
 
   function removeEducation(index) {
     setEducation((prev) => prev.filter((_, i) => i !== index));
-  }
-
-  function handleClick() {
-    setIsOpen((prev) => !prev);
   }
 
   return (

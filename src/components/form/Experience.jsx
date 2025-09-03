@@ -1,20 +1,6 @@
-import { useState } from "react";
 import { ArrowUpIcon, ArrowDownIcon, CloseIcon } from "../Icons";
 
 export default function Experience({ isActive, onShow, experience, setExperience }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  function handleClick() {
-    setIsOpen((prev) => !prev);
-  }
-
-  function addExperience() {
-    setExperience((prev) => [
-      ...prev,
-      { jobTitle: "", company: "", years: "" , description: "" },
-    ]);
-  }
-
   function removeExperience(index) {
     setExperience((prev) => prev.filter((_, i) => i !== index));
   }

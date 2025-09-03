@@ -1,17 +1,10 @@
-import { useState } from "react";
 import { ArrowUpIcon, ArrowDownIcon } from "../Icons";
 
 export function Contact({ isActive, onShow, contact, setContact }) {
 
-  // const [isOpen, setIsOpen] = useState(false);
-
   function handleChange(e) {
     const { name, value } = e.target;
     setContact((prev) => ({ ...prev, [name]: value }));
-  }
-
-  function handleClick() {
-    setIsOpen((prev) => !prev);
   }
 
   return (
