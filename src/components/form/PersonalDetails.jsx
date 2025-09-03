@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { ArrowUpIcon, ArrowDownIcon } from "../Icons";
 
-export function PersonalDetails({ personal, setPersonal }) {
+export function PersonalDetails({ isActive, onShow, personal, setPersonal }) {
 
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -16,8 +16,8 @@ export function PersonalDetails({ personal, setPersonal }) {
 
   return (
     <section className="form-section" >
-      <p onClick={handleClick}>📝 Personal Details {isOpen ? (<ArrowUpIcon size={20} />) : (<ArrowDownIcon size={20} />)}</p>
-      {isOpen ? (
+      <p onClick={onShow}>📝 Personal Details {isActive ? (<ArrowUpIcon size={20} />) : (<ArrowDownIcon size={20} />)}</p>
+      {isActive ? (
       <form className="form-personal">
         <label>
           Name:

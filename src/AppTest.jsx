@@ -10,6 +10,8 @@ import { Contact } from "./components/form/Contact";
 import Preview from "./components/resume/ResumePreview";
 
 function App() {
+  const [activeSection, setActiveSection] = useState("");
+
   const [personal, setPersonal] = useState({
     name: "Muhammad Hudaa Sabrie",
     city: "Balikpapan",
@@ -69,16 +71,20 @@ function App() {
     handlePrint();
   };
 
+  const handleSectionToggle = (section) => {
+    setActiveSection((prev) => (prev === section ? null : section));
+  };
+
   return (
     <>
       <Header onDownload={handleDownload} />
       <main>
         <div className="form-container">
-          <PersonalDetails personal={personal} setPersonal={setPersonal} />
-          <Contact contact={contact} setContact={setContact} />
-          <Education education={education} setEducation={setEducation} />
-          <Skills skills={skills} setSkills={setSkills} />
-          <Experience experience={experience} setExperience={setExperience} />
+          <PersonalDetails isActive={activeSection === "personal"} onShow={()=> handleSectionToggle("personal")} personal={personal} setPersonal={setPersonal} />
+          <Contact isActive={activeSection === "contact"} onShow={() => handleSectionToggle("contact")} contact={contact} setContact={setContact} />
+          <Education isActive={activeSection === "education"} onShow={() => handleSectionToggle("education")} education={education} setEducation={setEducation} />
+          <Skills isActive={activeSection === "skills"} onShow={() => handleSectionToggle("skills")} skills={skills} setSkills={setSkills} />
+          <Experience isActive={activeSection === "experience"} onShow={() => handleSectionToggle("experience")} experience={experience} setExperience={setExperience} />
         </div>
         <div className="preview-wrapper">
           <div className="form-preview" ref={previewRef}>

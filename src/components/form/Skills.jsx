@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ArrowUpIcon, ArrowDownIcon, CloseIcon } from "../Icons";
 
-export default function Skills({ skills, setSkills }) {
+export default function Skills({ isActive, onShow, skills, setSkills }) {
   const [isOpen, setIsOpen] = useState(false);
 
   function removeSkill(index) {
@@ -22,11 +22,11 @@ export default function Skills({ skills, setSkills }) {
 
   return (
     <section className="form-section">
-      <p onClick={handleClick}>
+      <p onClick={onShow}>
         💡 Skills{" "}
-        {isOpen ? <ArrowUpIcon size={20} /> : <ArrowDownIcon size={20} />}
+        {isActive ? <ArrowUpIcon size={20} /> : <ArrowDownIcon size={20} />}
       </p>
-      {isOpen ? (
+      {isActive ? (
         <>
           <div className="skills-list">
             {skills.map((skill, index) => (

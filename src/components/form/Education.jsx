@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { ArrowUpIcon, ArrowDownIcon, CloseIcon } from "../Icons";
 
-export default function Education({ education, setEducation }) {
+export default function Education({ isActive, onShow, education, setEducation }) {
   const [formData, setFormData] = useState({
     institution: "",
     degree: "",
@@ -32,11 +32,11 @@ export default function Education({ education, setEducation }) {
 
   return (
     <section className="form-section">
-      <p onClick={handleClick}>
+      <p onClick={onShow}>
         🎓 Education{" "}
-        {isOpen ? <ArrowUpIcon size={20} /> : <ArrowDownIcon size={20} />}
+        {isActive ? <ArrowUpIcon size={20} /> : <ArrowDownIcon size={20} />}
       </p>
-      {isOpen ? (
+      {isActive ? (
         <>
           <div className="education-list">
             {education.map((edu, index) => (
