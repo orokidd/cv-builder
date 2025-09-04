@@ -42,9 +42,27 @@ header {
     color: whitesmoke;
 }
 
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.reset-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+.reset-button:hover {
+  background-color: rgb(220, 220, 220);
+}
+
 .download-button {
   padding: 10px 16px;
-  background-color: white;
+  background-color: #eeeeee;
   border-radius: 6px;
   font-weight: 400;
 }
