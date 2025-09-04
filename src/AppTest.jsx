@@ -77,7 +77,7 @@ function App() {
 
   return (
     <>
-      <Header onDownload={handleDownload} />
+      <Header onDownload={handleDownload} setPersonal={setPersonal} setContact={setContact} setEducation={setEducation} setExperience={setExperience} setSkills={setSkills} />
       <main>
         <div className="form-container">
           <PersonalDetails isActive={activeSection === "personal"} onShow={()=> handleSectionToggle("personal")} personal={personal} setPersonal={setPersonal} />
