@@ -8,8 +8,13 @@ import Skills from "./components/form/Skills";
 import Experience from "./components/form/Experience";
 import { Contact } from "./components/form/Contact";
 import Preview from "./components/resume/ResumePreview";
+import { useMediaQuery } from "react-responsive";
 
 function App() {
+  const isMobile = useMediaQuery({ maxWidth: 1041 });
+
+  const [mode, setMode] = useState("edit");
+
   const [activeSection, setActiveSection] = useState("");
 
   const [personal, setPersonal] = useState({
@@ -77,7 +82,7 @@ function App() {
 
   return (
     <>
-      <Header onDownload={handleDownload} setPersonal={setPersonal} setContact={setContact} setEducation={setEducation} setExperience={setExperience} setSkills={setSkills} />
+      <Header isMobile={isMobile} mode={mode} setMode={setMode} onDownload={handleDownload} setPersonal={setPersonal} setContact={setContact} setEducation={setEducation} setExperience={setExperience} setSkills={setSkills} />
       <main>
         <div className="form-container">
           <PersonalDetails isActive={activeSection === "personal"} onShow={()=> handleSectionToggle("personal")} personal={personal} setPersonal={setPersonal} />
