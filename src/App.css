@@ -53,7 +53,7 @@ header {
   align-items: center;
 
   padding: 10px;
-  background-color: #eeeeee;
+  background-color: #ffffff;
   border-radius: 10px;
 }
 .reset-button:hover {
@@ -62,12 +62,26 @@ header {
 
 .download-button {
   padding: 10px 16px;
-  background-color: #eeeeee;
+  background-color: #ffffff;
   border-radius: 6px;
   font-weight: 400;
 }
 
 .download-button:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+.preview-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.preview-button:hover {
   background-color: rgb(220, 220, 220);
 }
 
@@ -258,5 +272,11 @@ textarea {
     margin: 0 !important;
     box-shadow: none !important;
     zoom: 1 !important;
+  }
+}
+
+@media screen and (max-width: 1041px) {
+  .preview-button{
+    display: flex;
   }
 }
