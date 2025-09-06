@@ -279,7 +279,7 @@ textarea {
   .preview-button{
     display: flex;
   }
-  .form-preview {
+  /* .form-preview {
     display: none;
-  }
+  } */
 }
