@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: linear-gradient(135deg, #ededed 0%, #dfdfdf 100%);
 }
 
 button {
@@ -25,26 +26,25 @@ main {
   padding: 24px 0;
 }
 
-
 header {
   background-color: rgb(98, 107, 94);
   padding: 20px;
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1430px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1006px;
+  margin: 0 auto;
 }
-.header-content > h1{
-    margin: 0;
-    color: whitesmoke;
+.header-content > h1 {
+  margin: 0;
+  color: whitesmoke;
 }
 
 .header-actions {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
 
 .reset-button {
@@ -91,7 +91,6 @@ h3 {
 
 p {
   white-space: pre-line;
-  
 }
 
 li {
@@ -104,16 +103,29 @@ ul {
   list-style-position: inside;
 }
 
-.form-container {
+/* .form-container {
     display: flex;
     flex-direction: column;
     gap: 24px;
 
     min-width: 400px;
     max-width: 400px;
+} */
+
+.form-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  height: fit-content;
+
+  min-width: 340px;
+  max-width: 340px;
 }
 
-.form-section {
+/* .form-section {
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -122,8 +134,19 @@ ul {
   padding: 16px;
   border-radius: 8px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.form-section {
+  margin-bottom: 1.5rem;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 16px;
+  /* padding: 1.5rem; */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
-.form-section p {
+
+/* .form-section p {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -131,6 +154,15 @@ ul {
 
   font-size: 16px;
   margin: 0;
+} */
+
+.form-section p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* form {
@@ -185,11 +217,12 @@ ul {
 }
 
 .form-preview {
+  background: white;
   min-width: 900px;
   max-width: 900px;
   min-height: 1200px;
   max-height: 1400px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 40px;
   zoom: 0.6;
 }
@@ -279,7 +312,7 @@ textarea {
 }
 
 @media screen and (max-width: 1041px) {
-  .preview-button{
+  .preview-button {
     display: flex;
   }
   /* .form-preview {
@@ -299,5 +332,5 @@ textarea {
   }
   .form-container {
     min-width: 90vw;
-}
+  }
 }
