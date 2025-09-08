@@ -108,6 +108,9 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    min-width: 400px;
+    max-width: 400px;
 }
 
 .form-section {
@@ -118,8 +121,6 @@ ul {
   border: 1px solid #ccc;
   padding: 16px;
   border-radius: 8px;
-  min-width: 400px;
-  max-width: 400px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 .form-section p {
@@ -287,8 +288,16 @@ textarea {
 }
 
 @media screen and (max-width: 640px) {
+  /* main {
+    min-height: 80vh;
+    flex-direction: column;
+    align-items: center;
+  } */
   .form-preview {
     width: 120vw;
     min-width: 0;
   }
+  .form-container {
+    min-width: 90vw;
+}
 }
