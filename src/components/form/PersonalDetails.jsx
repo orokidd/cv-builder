@@ -9,7 +9,7 @@ export function PersonalDetails({ isActive, onShow, personal, setPersonal }) {
 
   return (
     <section className="form-section" >
-      <p onClick={onShow}>📝 Personal Details {isActive ? (<ArrowUpIcon size={20} />) : (<ArrowDownIcon size={20} />)}</p>
+      <p className="form-section-title" onClick={onShow}>📝 Personal Details {isActive ? (<ArrowUpIcon size={20} />) : (<ArrowDownIcon size={20} />)}</p>
       {isActive ? (
       <form className="form-personal">
         <label>

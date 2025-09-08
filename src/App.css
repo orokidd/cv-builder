@@ -27,16 +27,19 @@ main {
 }
 
 header {
-  background-color: rgb(98, 107, 94);
+  background-color: rgb(98, 111, 121);
   padding: 20px;
 }
 
-input, button, textarea, select {
-	font: inherit;
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 form {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 h3 {
@@ -170,7 +173,7 @@ textarea {
   margin-bottom: 1.5rem;
   background: rgba(248, 250, 252, 0.8);
   border-radius: 16px;
-  /* padding: 1.5rem; */
+  padding: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid transparent;
@@ -193,6 +196,15 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0;
+  padding: 18px 0;
+}
+
+.form-section:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: rgba(103, 126, 234, 0.2);
 }
 
 /* form {
