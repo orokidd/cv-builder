@@ -202,6 +202,8 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 18px;
+
+  padding-right: 18px;
 }
 .preview-right {
   flex: 1.5;
@@ -282,4 +284,11 @@ textarea {
   /* .form-preview {
     display: none;
   } */
+}
+
+@media screen and (max-width: 640px) {
+  .form-preview {
+    width: 120vw;
+    min-width: 0;
+  }
 }
