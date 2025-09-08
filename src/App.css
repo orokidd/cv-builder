@@ -31,6 +31,54 @@ header {
   padding: 20px;
 }
 
+input, button, textarea, select {
+	font: inherit;
+}
+
+form {
+  font-size: .9rem;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  white-space: pre-line;
+}
+
+li {
+  padding: 4px 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+input {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 12px;
+  display: block; /* makes it take its own line */
+  width: 100%; /* makes it span the whole container */
+  box-sizing: border-box; /* ensures padding/border don’t overflow */
+}
+
+textarea {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 12px;
+  display: block; /* makes it take its own line */
+  width: 100%; /* makes it span the whole container */
+  box-sizing: border-box; /* ensures padding/border don’t overflow */
+  min-height: 120px;
+  resize: none;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -83,24 +131,6 @@ header {
 
 .preview-button:hover {
   background-color: rgb(220, 220, 220);
-}
-
-h3 {
-  margin: 0;
-}
-
-p {
-  white-space: pre-line;
-}
-
-li {
-  padding: 4px 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-position: inside;
 }
 
 /* .form-container {
@@ -278,28 +308,6 @@ ul {
 
 .preview-side .section-title {
   margin-right: 24px;
-}
-
-input {
-  padding: 12px 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-top: 12px;
-  display: block; /* makes it take its own line */
-  width: 100%; /* makes it span the whole container */
-  box-sizing: border-box; /* ensures padding/border don’t overflow */
-}
-
-textarea {
-  padding: 12px 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-top: 12px;
-  display: block; /* makes it take its own line */
-  width: 100%; /* makes it span the whole container */
-  box-sizing: border-box; /* ensures padding/border don’t overflow */
-  min-height: 80px;
-  resize: vertical;
 }
 
 @media print {
