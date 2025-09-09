@@ -146,6 +146,10 @@ textarea {
 } */
 
 .form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -170,10 +174,9 @@ textarea {
 } */
 
 .form-section {
-  margin-bottom: 1.5rem;
   background: rgba(248, 250, 252, 0.8);
   border-radius: 16px;
-  padding: 1rem;
+  /* padding: 1rem; */
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid transparent;
@@ -197,7 +200,9 @@ textarea {
   align-items: center;
   justify-content: space-between;
   margin: 0;
-  padding: 18px 0;
+  padding: 1rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
 }
 
 .form-section:hover {
@@ -220,6 +225,8 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 12px;
+
+  padding: 1rem;
 }
 
 .education-list,
@@ -229,7 +236,7 @@ textarea {
   flex-wrap: wrap;
   gap: 8px;
 
-  padding-bottom: 12px;
+  padding: 1rem;
 }
 .education-item,
 .experience-item,
