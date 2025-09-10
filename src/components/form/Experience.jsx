@@ -30,7 +30,7 @@ export default function Experience({ isActive, onShow, experience, setExperience
             {experience.map((exp, index) => (
               <div key={index} className="experience-item">
                 <span>{exp.company || "Unknown Company"}</span>
-                <button type="button" onClick={() => removeExperience(index)}>
+                <button type="button" className="remove-experience-button" onClick={() => removeExperience(index)}>
                   <CloseIcon size={20} />
                 </button>
               </div>

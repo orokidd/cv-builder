@@ -270,6 +270,19 @@ textarea {
   background-color: rgb(78, 87, 74);
 }
 
+.remove-education-button,
+.remove-skill-button,
+.remove-experience-button {
+  transition: 0.2s ease;
+}
+
+.remove-education-button:hover,
+.remove-skill-button:hover,
+.remove-experience-button:hover {
+  color: rgb(165, 0, 0);
+}
+
+
 .form-preview {
   background: white;
   min-width: 900px;

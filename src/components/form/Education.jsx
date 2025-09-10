@@ -36,7 +36,7 @@ export default function Education({ isActive, onShow, education, setEducation })
             {education.map((edu, index) => (
               <div key={index} className="education-item">
                 <span>{edu.institution || "Unknown Institution"}</span>
-                <button type="button" onClick={() => removeEducation(index)}>
+                <button type="button" className="remove-education-button" onClick={() => removeEducation(index)}>
                   <CloseIcon size={20} />
                 </button>
               </div>

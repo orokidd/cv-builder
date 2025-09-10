@@ -25,7 +25,7 @@ export default function Skills({ isActive, onShow, skills, setSkills }) {
             {skills.map((skill, index) => (
               <div key={index} className="skills-item">
                 <span>{skill.skillName || "Unknown Skill"}</span>
-                <button type="button" onClick={() => removeSkill(index)}>
+                <button type="button" className="remove-skill-button" onClick={() => removeSkill(index)}>
                   <CloseIcon size={20} />
                 </button>
               </div>
