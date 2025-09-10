@@ -2,15 +2,18 @@
   font-family: Inter, Arial, sans-serif;
 }
 
-#root,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background: linear-gradient(135deg, #ededed 0%, #dfdfdf 100%);
+  min-height: 100vh;
 }
 
 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: none;
   border: none;
   cursor: pointer;
@@ -85,6 +88,7 @@ textarea {
 .header-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 1006px;
   margin: 0 auto;
 }
@@ -112,9 +116,9 @@ textarea {
 }
 
 .download-button {
-  padding: 10px 16px;
+  padding: 10px;
   background-color: #ffffff;
-  border-radius: 6px;
+  border-radius: 10px;
   font-weight: 400;
   font-size: .8rem;
 }
@@ -343,9 +347,6 @@ textarea {
   .preview-button {
     display: flex;
   }
-  /* .form-preview {
-    display: none;
-  } */
 }
 
 @media screen and (max-width: 640px) {
@@ -359,6 +360,14 @@ textarea {
     min-width: 0;
   }
   .form-container {
-    min-width: 90vw;
+    min-width: 80vw;
+    max-width: 80vw;
   }
+}
+
+@media screen and (max-width: 460px) {
+  .header-title {
+    font-size: 1.6rem;
+  }
+
 }
