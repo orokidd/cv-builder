@@ -61,21 +61,24 @@ function App() {
     {
       jobTitle: "Software Engineer",
       company: "ABC Corp",
-      years: "2021-2023",
+      startDate: "2021",
+      endDate: "2023",
       description:
         "Worked on developing web applications using React and Node.js. Built interactive user interfaces with React.js, improving client website engagement by 25%.",
     },
     {
       jobTitle: "Web Developer",
       company: "XYZ Inc",
-      years: "2020-2021",
+      startDate: "2020",
+      endDate: "2021",
       description:
         "Involved in building responsive websites using HTML, CSS, and JavaScript. Implemented SEO best practices and improved website performance, achieving faster load times.",
     },
     {
       jobTitle: "Intern",
       company: "LMN Ltd",
-      years: "2019-2020",
+      startDate: "2019",
+      endDate: "2020",
       description:
         "Assisted in the development of internal tools and applications. Worked with version control (Git/GitHub) to manage codebase and collaborate with team members",
     },

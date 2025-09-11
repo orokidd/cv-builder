@@ -12,7 +12,7 @@ export function Experience({ experience }) {
           <div key={index} className="item">
             <div className="company">
               <h3>{exp.company || "Company name"}</h3>
-              <h3>{exp.years || "Years of Experience"}</h3>
+              <h3>{exp.startDate} - {exp.endDate}</h3>
             </div>
             <p className="job-title">
               {exp.jobTitle || "Job title"}

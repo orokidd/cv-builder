@@ -46,10 +46,16 @@ export default function Experience({ isActive, onShow, experience, setExperience
               Company:
               <input type="text" name="company" />
             </label>
-            <label>
-              Years of Experience:
-              <input type="text" name="years" />
-            </label>
+            <div className="year-experience">
+              <label>
+                Start Date:
+                <input type="text" name="years" />
+              </label>
+              <label>
+                End Date:
+                <input type="text" name="endDate" />
+              </label>
+            </div>
             <label>
               Description:
               <textarea name="description" placeholder="Use (-) for bullet points"/>
