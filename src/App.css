@@ -120,7 +120,7 @@ textarea {
   background-color: #ffffff;
   border-radius: 10px;
   font-weight: 400;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .download-button:hover {
@@ -162,6 +162,7 @@ textarea {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   height: fit-content;
+  animation: fadeInReveal 0.6s ease forwards;
 
   min-width: 360px;
   max-width: 360px;
@@ -282,7 +283,6 @@ textarea {
   color: rgb(165, 0, 0);
 }
 
-
 .form-preview {
   background: white;
   min-width: 900px;
@@ -292,6 +292,7 @@ textarea {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 40px;
   zoom: 0.6;
+  animation: fadeInReveal 0.6s ease forwards;
 }
 
 .preview-main {
@@ -347,6 +348,17 @@ textarea {
   margin-right: 24px;
 }
 
+@keyframes fadeInReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media print {
   .form-preview {
     width: 100% !important;
@@ -382,5 +394,4 @@ textarea {
   .header-title {
     font-size: 1.6rem;
   }
-
 }
