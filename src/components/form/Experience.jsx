@@ -11,7 +11,8 @@ export default function Experience({ isActive, onShow, experience, setExperience
     const newExp = {
       jobTitle: formData.get("jobTitle"),
       company: formData.get("company"),
-      years: formData.get("years"),
+      startDate: formData.get("startDate"),
+      endDate: formData.get("endDate"),
       description: formData.get("description"),
     };
     setExperience((prev) => [...prev, newExp]);
@@ -49,7 +50,7 @@ export default function Experience({ isActive, onShow, experience, setExperience
             <div className="year-experience">
               <label>
                 Start Date:
-                <input type="text" name="years" />
+                <input type="text" name="startDate" />
               </label>
               <label>
                 End Date:
