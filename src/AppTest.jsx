@@ -21,18 +21,18 @@ function App() {
   const [activeSection, setActiveSection] = useState("");
 
   const [personal, setPersonal] = useState({
-    name: "Muhammad Hudaa Sabrie",
-    city: "Balikpapan",
+    name: "Gregorius Deandra Hanifa",
+    city: "Samarinda",
     state: "Kalimantan Timur",
     profile:
       "Software Engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success.",
   });
 
   const [contact, setContact] = useState({
-    email: "hudasabrie@gmail.com",
-    phone: "0895-3397-41303",
-    website: "www.hudasabrie.com",
-    address: "Jl. Padat Karya No. 7",
+    email: "gregorius@example.com",
+    phone: "0895-1423-5867",
+    website: "www.gregorius.com",
+    address: "Jl. Yos Sudarso No. 7",
   });
 
   const [education, setEducation] = useState([
