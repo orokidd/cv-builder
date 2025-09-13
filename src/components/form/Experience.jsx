@@ -48,11 +48,11 @@ export default function Experience({ isActive, onShow, experience, setExperience
               <input type="text" name="company" />
             </label>
             <div className="year-experience">
-              <label>
+              <label className="start-date-label">
                 Start Date:
                 <input type="text" name="startDate" />
               </label>
-              <label>
+              <label className="end-date-label">
                 End Date:
                 <input type="text" name="endDate" />
               </label>

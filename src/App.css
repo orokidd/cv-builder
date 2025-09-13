@@ -283,6 +283,17 @@ textarea {
   color: rgb(165, 0, 0);
 }
 
+.year-experience {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.start-date-label,
+.end-date-label {
+  flex: 1;
+}
+
 .form-preview {
   background: white;
   min-width: 900px;
