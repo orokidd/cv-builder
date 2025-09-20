@@ -61,7 +61,7 @@ function App() {
   };
 
 
-  const sections = (
+  const formSections = (
   <Form
     personal={personal}
     setPersonal={setPersonal}
@@ -76,20 +76,23 @@ function App() {
   />
 );
 
-  const preview = (
-    <div className="preview-wrapper">
-      <div className="form-preview" ref={previewRef}>
-        <Preview personal={personal} contact={contact} education={education} experience={experience} skills={skills} />
-      </div>
-    </div>
+  const previewSections = (
+    <Preview
+      ref={previewRef}
+      personal={personal}
+      contact={contact}
+      education={education}
+      experience={experience}
+      skills={skills}
+    />
   );
 
   return (
     <>
       <Header isMobile={isMobile} mode={mode} setMode={setMode} onDownload={handleDownload} resetData={resetData} />
       <main>
-        {shouldShowForm ? sections : null}
-        {shouldShowPreview ? preview : null}
+        {shouldShowForm ? formSections : null}
+        {shouldShowPreview ? previewSections : null}
       </main>
     </>
   );
