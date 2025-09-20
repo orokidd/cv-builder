@@ -9,6 +9,13 @@ import Experience from "./components/form/Experience";
 import { Contact } from "./components/form/Contact";
 import Preview from "./components/resume/ResumePreview";
 import { useMediaQuery } from "react-responsive";
+import {
+  INITIAL_PERSONAL,
+  INITIAL_CONTACT,
+  INITIAL_EDUCATION,
+  INITIAL_SKILLS,
+  INITIAL_EXPERIENCE,
+} from "./components/FakeData";
 
 function App() {
   const isMobile = useMediaQuery({ maxWidth: 1041 });
@@ -20,83 +27,15 @@ function App() {
 
   const [activeSection, setActiveSection] = useState("");
 
-  const [personal, setPersonal] = useState({
-    name: "Gregorius Deandra Hanifa",
-    city: "Samarinda",
-    state: "Kalimantan Timur",
-    profile:
-      "Software Engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success.",
-  });
+  const [personal, setPersonal] = useState(INITIAL_PERSONAL);
+  const [contact, setContact] = useState(INITIAL_CONTACT);
+  const [education, setEducation] = useState(INITIAL_EDUCATION);
+  const [skills, setSkills] = useState(INITIAL_SKILLS);
+  const [experience, setExperience] = useState(INITIAL_EXPERIENCE);
 
-  const [contact, setContact] = useState({
-    email: "gregorius@example.com",
-    phone: "0895-1423-5867",
-    website: "www.gregorius.com",
-    address: "Jl. Yos Sudarso No. 7",
-  });
-
-  const [education, setEducation] = useState([
-    {
-      institution: "Universitas Gadjah Mada",
-      degree: "S1 Teknik Informatika",
-      year: "2020",
-    },
-    {
-      institution: "Universitas Indonesia",
-      degree: "S2 Ilmu Komputer",
-      year: "2025",
-    },
-  ]);
-
-  const [skills, setSkills] = useState([
-    { skillName: "JavaScript" },
-    { skillName: "React" },
-    { skillName: "Node.js" },
-    { skillName: "CSS" },
-    { skillName: "Git" },
-    { skillName: "Linux" },
-  ]);
-
-  const [experience, setExperience] = useState([
-    {
-      jobTitle: "Software Engineer",
-      company: "ABC Corp",
-      startDate: "2021",
-      endDate: "2023",
-      description:
-        "Worked on developing web applications using React and Node.js. Built interactive user interfaces with React.js, improving client website engagement by 25%.",
-    },
-    {
-      jobTitle: "Web Developer",
-      company: "XYZ Inc",
-      startDate: "2020",
-      endDate: "2021",
-      description:
-        "Involved in building responsive websites using HTML, CSS, and JavaScript. Implemented SEO best practices and improved website performance, achieving faster load times.",
-    },
-    {
-      jobTitle: "Intern",
-      company: "LMN Ltd",
-      startDate: "2019",
-      endDate: "2020",
-      description:
-        "Assisted in the development of internal tools and applications. Worked with version control (Git/GitHub) to manage codebase and collaborate with team members",
-    },
-  ]);
-
-    function resetData() {
-    setPersonal({
-      name: "",
-      city: "",
-      state: "",
-      profile: "",
-    });
-    setContact({
-      email: "",
-      phone: "",
-      website: "",
-      address: "",
-    });
+  function resetData() {
+    setPersonal({name: "", city: "", state: "", profile: "",});
+    setContact({email: "", phone: "", website: "", address: "",});
     setEducation([]);
     setExperience([]);
     setSkills([]);
