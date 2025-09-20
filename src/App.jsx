@@ -2,11 +2,7 @@ import { useState, useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 import "./App.css";
 import Header from "./components/Header";
-import { PersonalDetails } from "./components/form/PersonalDetails";
-import Education from "./components/form/Education";
-import Skills from "./components/form/Skills";
-import Experience from "./components/form/Experience";
-import { Contact } from "./components/form/Contact";
+import Form from "./components/form/Form";
 import Preview from "./components/resume/ResumePreview";
 import { useMediaQuery } from "react-responsive";
 import {
@@ -24,8 +20,6 @@ function App() {
 
   const shouldShowForm = !isMobile || (isMobile && mode === "edit");
   const shouldShowPreview = !isMobile || (isMobile && mode === "preview");
-
-  const [activeSection, setActiveSection] = useState("");
 
   const [personal, setPersonal] = useState(INITIAL_PERSONAL);
   const [contact, setContact] = useState(INITIAL_CONTACT);
@@ -66,19 +60,21 @@ function App() {
     handlePrint();
   };
 
-  const handleSectionToggle = (section) => {
-    setActiveSection((prev) => (prev === section ? null : section));
-  };
 
   const sections = (
-    <div className="form-container">
-      <PersonalDetails isActive={activeSection === "personal"} onShow={() => handleSectionToggle("personal")} personal={personal} setPersonal={setPersonal} />
-      <Contact isActive={activeSection === "contact"} onShow={() => handleSectionToggle("contact")} contact={contact} setContact={setContact} />
-      <Education isActive={activeSection === "education"} onShow={() => handleSectionToggle("education")} education={education} setEducation={setEducation} />
-      <Skills isActive={activeSection === "skills"} onShow={() => handleSectionToggle("skills")} skills={skills} setSkills={setSkills} />
-      <Experience isActive={activeSection === "experience"} onShow={() => handleSectionToggle("experience")} experience={experience} setExperience={setExperience} />
-    </div>
-  );
+  <Form
+    personal={personal}
+    setPersonal={setPersonal}
+    contact={contact}
+    setContact={setContact}
+    education={education}
+    setEducation={setEducation}
+    skills={skills}
+    setSkills={setSkills}
+    experience={experience}
+    setExperience={setExperience}
+  />
+);
 
   const preview = (
     <div className="preview-wrapper">
